@@ -1,0 +1,92 @@
+<html >
+<head> 
+<title>simpletag</title>
+
+<script language="javascript" type="application/javascript" src="tag.js"></script>
+
+
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+body{ font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#333;
+background:#eee;}
+
+#main, #code{
+	background:#FFF;
+	border:1px solid #CCC;
+	position: relative;
+	display:block;
+	padding:10px;
+	margin:10px auto;
+	width:600px;
+	min-height:200px
+}
+#code{ background:#eee}
+#code > code > pre{
+	
+	overflow: auto;
+	}
+
+.box{
+	position: relative;
+	display:block;
+	background:#eee;
+	border:1px solid #333;
+	padding:10px;
+	margin:10px auto;
+	width:180px;
+	height:220px
+}
+
+</style>
+ 
+</head>
+
+<body> 
+  
+<div id="code"> 
+<h1>Code</h1>
+     <code>
+     <pre>
+    var main = tag.create('div #main .main');    
+    
+    var titulo = tag.create('h1',{'content':'Hello world!','title':'Hello world!'},{'click': function(){ alert('hola'); } });  
+    
+    var parrafo = tag.p({'content':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mi vulputate mauris adipiscing suscipit id ac sapien. Nam eros risus, congue non blandit et, ultricies at ipsum. Aliquam pulvinar aliquet lectus ut accumsan. Ut leo turpis, ullamcorper sit amet semper et, bibendum in erat. Suspendisse potenti. Vivamus nec odio sed sapien facilisis dictum. Pellentesque nec neque eget purus vestibulum molestie nec ut felis. Praesent mollis, ante at convallis facilisis, metus tortor vestibulum orci, non iaculis dolor nibh ac nibh. Sed at tellus et erat volutpat fringilla non ac lorem. Morbi eros nisi, auctor in tempor nec, mattis in nunc. Phasellus ac sapien urna.'});  
+    
+    var img = tag.img({'src':'http://placekitten.com/160/200','class':'box'});
+    
+    main.appendChild(titulo);
+    
+    main.appendChild(parrafo).appendChild(img);
+    
+    document.body.appendChild(main);
+    </pre>
+    </code>
+</div>
+</body>
+<script>  
+ 
+var main = tag.create('div #main .main');    
+
+var titulo = tag.create('h1',{'content':'Hello world!','title':'Hello world!'},{'click': function(){ alert('hola'); } });  
+
+var parrafo = tag.p({'content':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id mi vulputate mauris adipiscing suscipit id ac sapien. Nam eros risus, congue non blandit et, ultricies at ipsum. Aliquam pulvinar aliquet lectus ut accumsan. Ut leo turpis, ullamcorper sit amet semper et, bibendum in erat. Suspendisse potenti. Vivamus nec odio sed sapien facilisis dictum. Pellentesque nec neque eget purus vestibulum molestie nec ut felis. Praesent mollis, ante at convallis facilisis, metus tortor vestibulum orci, non iaculis dolor nibh ac nibh. Sed at tellus et erat volutpat fringilla non ac lorem. Morbi eros nisi, auctor in tempor nec, mattis in nunc. Phasellus ac sapien urna.'});  
+
+var img = tag.img({'src':'http://placekitten.com/160/200','class':'box'});
+ 
+
+main.appendChild(titulo);
+
+main.appendChild(parrafo).appendChild(img);
+
+document.body.appendChild(main);
+
+
+  
+</script>
+</html>
